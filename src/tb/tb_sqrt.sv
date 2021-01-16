@@ -116,6 +116,7 @@ initial begin : main
 
     wait(!rst);
     repeat(3) @(posedge clk);
+    $display("Test started. Will push %0d words to DUT.", ITER_N);
 
     fork
         push_data();

@@ -59,9 +59,9 @@ def write_memfile(path, data):
 
 class Simulator:
     """Simulator wrapper"""
-    def __init__(self, name='icarus', gui=True, cwd='work', passed_mark='!@# TEST PASSED #@!'):
+    def __init__(self, name='icarus', gui=True, cwd='work', passed_marker='!@# TEST PASSED #@!'):
         self.gui = gui
-        self.passed_mark = passed_mark
+        self.passed_marker = passed_marker
 
         self.cwd = Path(cwd).resolve()
         if parent_dir(__file__) == self.cwd:
@@ -103,7 +103,7 @@ class Simulator:
 
     @property
     def is_passed(self):
-        return self.passed_mark in self.stdout
+        return self.passed_marker in self.stdout
 
     def _exec(self, prog, args):
         """Execute external program.

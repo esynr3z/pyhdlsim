@@ -46,7 +46,7 @@ Main idea is to wrap several simulators like Icarus Verilog, Modelsim or Vivado 
 ./test_sqrt -t test_sv
 ```
 
-* to run single test in batch node without GUI
+* to run single test in batch mode without GUI
 
 ```
 ./test_sqrt -t test_sv -b
